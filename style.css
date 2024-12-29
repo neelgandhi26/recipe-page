@@ -1,0 +1,167 @@
+:root {
+  --clr-primary-800: hsl(14, 45%, 36%);
+  --clr-secondary-800: hsl(332, 51%, 32%);
+
+  --clr-neutral-900: hsl(24, 5%, 18%);
+  --clr-neutral-600: hsl(30, 10%, 34%);
+  --clr-neutral-150: hsl(30, 18%, 87%);
+  --clr-neutral-100: hsl(30, 54%, 90%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-title: "Young Serif", serif;
+  --ff-body: "Outfit", serif;
+  --fw-regular: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+body {
+  background-color: var(--clr-neutral-100);
+  color: var(--clr-neutral-600);
+  font-family: var(--ff-body);
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+ol,
+ul {
+  padding-left: 20px;
+}
+
+.recipe__content {
+  width: 50%;
+  margin: 2.5rem auto;
+  padding: 1.5rem 0 0 0;
+  background-color: var(--clr-white);
+  border-radius: 10px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto 1.5rem auto;
+}
+
+.recipe__img {
+  border-radius: 15px;
+}
+
+.recipe__title {
+  color: var(--clr-neutral-900);
+  font-family: var(--ff-title);
+  font-weight: var(--fw-regular);
+}
+
+.container h2 {
+  color: var(--clr-primary-800);
+  font-family: var(--ff-title);
+  font-weight: var(--fw-regular);
+}
+
+.container h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+.container li::marker {
+  color: var(--clr-primary-800);
+}
+
+li::marker {
+  font-weight: var(--fw-bold);
+}
+
+.recipe__prep,
+.recipe__prep-list li::marker {
+  color: var(--clr-secondary-800);
+}
+
+.prep-container {
+  padding-left: 1rem;
+}
+
+span {
+  font-weight: var(--fw-bold);
+}
+
+li {
+  padding-left: 0.75rem;
+}
+
+.container:not(:last-child) {
+  margin-bottom: 1.75rem;
+}
+
+.nutrition__table {
+  padding: 1rem 0 1.5rem 0;
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  padding: 0.5rem 15rem 0.5rem 2rem;
+  border-bottom: 1px solid var(--clr-neutral-150);
+}
+
+.receipe__nutrition__values {
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-bold);
+}
+
+@media (width < 800px) {
+  .recipe__content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .container:last-child {
+    margin-bottom: 0;
+  }
+}
